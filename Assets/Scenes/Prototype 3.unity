@@ -559,8 +559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65057fcf196e8234388b83f0ce4eb990, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  jumpforce: 20
-  gravityModifier: 2.5
   jumpforce: 700
   gravityModifier: 1.5
   gameover: 0

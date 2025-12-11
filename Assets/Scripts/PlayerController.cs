@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     private Rigidbody playerRB;
     public float jumpforce = 10;
     public float gravityModifier;
@@ -19,7 +18,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameover)
         {
             playerRB.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
