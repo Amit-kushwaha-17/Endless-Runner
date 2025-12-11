@@ -4,6 +4,7 @@ public class MoveLeft : MonoBehaviour
 {
     private float speed = 30f;
     private PlayerController playerControllerScript;
+
     private float leftbound = -10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
