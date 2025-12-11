@@ -1,2 +1,7 @@
 # Prototype3
-This is the endless runner game where you have to dodge obstacles and survive as long as possible
+Steps to use Project <br>
+Download Unity Hub v 6.1 or above <br>
+import project <br>
+select Endless-Runner <br> 
+and you are good to go <br>
+
