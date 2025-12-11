@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Animator animator;
     private Rigidbody playerRB;
     public float jumpforce = 10;
     public float gravityModifier;
