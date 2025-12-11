@@ -590,7 +590,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672025939}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 70
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 2014335012}
   m_Layer: 9
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -760,7 +760,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalScale: {x: 5.52, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -775,7 +775,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1336277588982556409, guid: a8d5a5ce3bd2e274384f5b2717a0581a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1336277588982556409, guid: a8d5a5ce3bd2e274384f5b2717a0581a, type: 3}
       propertyPath: m_LocalPosition.y

@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRB = GetComponent<Rigidbody>();
         Physics.gravity *= gravityModifier;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRB.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
             isOnGround =false;
+            animator.SetTrigger("Jump_trig");
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -35,6 +37,8 @@ public class PlayerController : MonoBehaviour
         {
             gameover = true;
             Debug.Log("Game Over");
+            animator.SetBool("Death_b", true);
+            animator.SetInteger("DeathType_Int", 1);
         }
     }
 }
