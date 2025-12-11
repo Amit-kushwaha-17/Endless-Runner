@@ -561,6 +561,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   jumpforce: 20
   gravityModifier: 2.5
+  jumpforce: 700
+  gravityModifier: 1.5
+  gameover: 0
 --- !u!65 &1672025941
 BoxCollider:
   m_ObjectHideFlags: 0
