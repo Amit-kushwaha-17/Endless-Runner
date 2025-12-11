@@ -6,9 +6,12 @@ public class SpawnManager : MonoBehaviour
     public GameObject obstacleObject;
     private float startDelay = 2f;
     private float repeatInterval = 2f;
+    private PlayerController playerControllerscript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerControllerscript = GameObject.Find("Player").GetComponent<PlayerController>();
+       
         InvokeRepeating("SpawnObstacle", startDelay, Random.Range(repeatInterval,4));
     }
 
@@ -19,6 +22,9 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnObstacle()
     {
-        Instantiate(obstacleObject, spawn, obstacleObject.transform.rotation);
+        if (playerControllerscript.gameover == false) {
+            Instantiate(obstacleObject, spawn, obstacleObject.transform.rotation);
+        }
+  
     }
 }
