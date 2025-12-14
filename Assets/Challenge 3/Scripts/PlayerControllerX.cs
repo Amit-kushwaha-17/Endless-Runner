@@ -16,6 +16,11 @@ public class PlayerControllerX : MonoBehaviour
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
+    public AudioClip BounceSound;
+
+    private float YPositionUP = 15.0f;
+    public bool isInAir = true;
+    private float YPositionDown = 0f;
 
 
     // Start is called before the first frame update
@@ -38,6 +43,16 @@ public class PlayerControllerX : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * floatForce,ForceMode.Impulse);
         }
+        if (transform.position.y > YPositionUP)
+        {
+            transform.position = new Vector3(transform.position.x,YPositionUP,transform.position.z);
+        }
+        if(!isInAir && transform.position.y < YPositionDown)
+        {
+            playerRb.AddForce(Vector3.up * 1f,ForceMode.Impulse);
+            
+        }
+        
         
     }
 
@@ -60,6 +75,11 @@ public class PlayerControllerX : MonoBehaviour
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
 
+        }
+        else if(other.gameObject.CompareTag("Ground") && !gameOver)
+        {
+            playerAudio.PlayOneShot(BounceSound, 1.0f);
+            isInAir = false;
         }
 
     }
